@@ -1,0 +1,5 @@
+
+/*youtube-----------------------------------------*/
+.video .video-list a::before{
+	content: "■";margin: 0 5px;color: #052246;line-height: 40px;
+}

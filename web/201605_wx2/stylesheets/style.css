@@ -1,0 +1,562 @@
+@charset "utf-8";
+td,
+tr {
+    valign: middle;
+    border: 0;
+    border-collapse: collapse;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+tr:first-child {
+    background: #750000;
+    color: #fff;
+    font: bold 18px/40px sans-serif;
+    font-family: Microsoft JhengHei;
+}
+
+ul,
+li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    max-width: 640px;
+    padding: 0;
+    margin: 0 auto;
+    background: #32643F url(../images/bk1.jpg) repeat;
+    font-family: Microsoft JhengHei;
+}
+
+strong {
+    color: #B00;
+}
+
+h1 {
+    text-align: center;
+}
+
+.bkw {
+    width: 100%;
+}
+
+.topbanner {
+    background: url(../images/topbanner.jpg) no-repeat center;
+    position: relative;
+    background-size: cover;
+    height: 830px;
+    -webkit-transition: all ease-out 0.1s;
+    -moz-transition: all ease-out 0.1s;
+    -ms-transition: all ease-out 0.1s;
+    -o-transition: all ease-out 0.1s;
+    transition: all ease-out 0.1s;
+}
+
+.inbanner {
+    height: 745px;
+}
+
+.inbk {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.topbtn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font: bold 16px/40px sans-serif;
+    text-align: center;
+    z-index: 9999;
+}
+
+.topbtn ul a,
+.topbtn ul li {
+    float: left;
+    width: 85px;
+    height: 40px;
+    text-align: center;
+    color: #FFF;
+    text-decoration: none;
+}
+
+.topbtn ul li {
+    margin: 0 8px;
+    cursor: pointer;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+    border: solid 2px #FFF;
+    border-top: 0px;
+}
+
+.topbtn ul li:hover {
+    opacity: 0.8;
+}
+
+.btn1 {
+    background: #000;
+}
+
+.btn2 {
+    background: #012d7f;
+}
+
+.btn3 {
+    background: #277901;
+}
+
+
+
+.downloadbar {
+    margin-top: 0px;
+}
+
+.indownloadbar {
+    width: 600px;
+    height: 50px;
+    padding: 25px 0;
+    clear: both;
+    text-align: center;
+}
+
+.indownloadbar li {
+    float: left;
+    width: 33%;
+    height: 50px;
+}
+
+.indownloadbar li img {
+    width: 145px;
+}
+
+.inf {
+    background: url(../images/bk1.jpg) repeat;
+    padding: 15px 0;
+}
+
+.ininf {
+    border-image-source: url(../images/border.png);
+    border-image-slice: 33 fill;
+    border-image-width: auto;
+    border-image-repeat: repeat;
+    -moz-box-shadow: 0px 0px 9px #000000;
+    -webkit-box-shadow: 0px 0px 9px #000000;
+    box-shadow: 0px 0px 9px #000000;
+    -o-box-shadow: 0px 0px 9px #000000;
+}
+
+.txtbox {
+    margin: 10px;
+    padding-bottom: 20px;
+}
+.txtbox a img{
+    width: 100%;
+    height: auto;
+}
+.inpage img{
+    width: 100%;
+    height: auto;
+}
+.back-m {
+  background: url(../images/close.png) 0 0 no-repeat;
+  width: 125px;
+  height: 60px;
+  right: 20px;
+  top: -50px;
+  cursor: pointer;
+  margin: 0 auto;
+}
+.top {
+    border-bottom: 2px solid #FFF;
+}
+
+.txt {
+    margin: 4% 5%;
+    font-weight: bolder;
+    font-size: 18px;
+    color: #47301b;
+    line-height: 1.5;
+    letter-spacing: 3px;
+}
+
+.txttitle {
+    border-left: 8px solid #B00;
+    border-bottom: 2px solid #B00;
+    font: bold 20px/28px sans-serif;
+    margin-top: 40px;
+    padding-left: 1%;
+    font-family: "Microsoft JhengHei";
+}
+
+.step li {
+    float: left;
+    margin: 1%;
+    width: 23%;
+    min-width: 165px;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    position: relative;
+    text-align: center;
+    -moz-border-radius: 10px;
+    -o-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: #9E1D00;
+    color: #fff;
+    font: bold 16px/28px sans-serif;
+    font-family: "Microsoft JhengHei";
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.step li:hover {
+    opacity: .9;
+}
+
+.step li div {
+    height: 150px;
+}
+
+.step li>img {
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -ms-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+}
+
+.alert-1 img {
+    width: 60px;
+    margin: 10px 0 -5px 0;
+}
+
+.imgcenter {
+    text-align: center;
+}
+
+.imgcenter img {
+    max-width: 800px;
+    width: 80%;
+}
+
+.infbtn {
+    background: #9E1D00;
+    color: #fff;
+    margin: 5px 1%;
+    margin-top: 15px;
+    width: 48%;
+    float: left;
+    font: bold 20px/28px sans-serif;
+    font-family: "Microsoft JhengHei";
+    text-align: center;
+    padding: 2% 0;
+    opacity: 1;
+    cursor: pointer;
+    webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+    -moz-border-radius: 10px;
+    -o-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+.infbtn a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.infbtn:hover {
+    opacity: .9;
+}
+
+.laststep {
+    padding-bottom: 40px;
+}
+
+.cr {
+    background: url(../images/footer_pc.png) no-repeat center;
+    height: 92px;
+    clear: both;
+}
+
+.logo {
+    position: absolute;
+    width: 40%;
+    top: 5px;
+    left: 10px;
+}
+
+.qr {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 30px;
+    left: 35%;
+}
+
+tbody {
+    background-color: rgba(255, 172, 54, 0.5);
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.mapstep li {
+    float: left;
+    margin: 1%;
+    width: 31%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    position: relative;
+    text-align: center;
+    -moz-border-radius: 10px;
+    -o-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: #9E1D00;
+    color: #fff;
+    font: bold 16px/28px sans-serif;
+    font-family: "Microsoft JhengHei";
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.mappic {
+    position: relative;
+    height: 40px;
+    width: 40px;
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+}
+
+.mapstep li div {
+    font: bold 20px/24px sans-serif;
+    font-family: "Microsoft JhengHei";
+}
+
+.mappic img {
+    left: 0;
+    bottom: 0;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+    transition: 1s;
+}
+
+.mappic img:hover {
+    position: absolute;
+}
+
+.mappic-img-active {
+    position: absolute;
+}
+
+.mapcss {}
+
+.map-btn {
+    cursor: pointer;
+    background: #9E1D00;
+    text-align: center;
+    -moz-border-radius: 10px;
+    -o-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    padding: 2%;
+    color: #FFF;
+    font-weight: bolder;
+    float: left;
+    margin: 0;
+}
+
+.map-tp {
+    clear: both;
+}
+
+
+/*
+tr:nth-child(even){ background-color:rgba(255,255,255,.3); 
+}
+tr:nth-child(1){ background-color:rgba(255,255,255,.6); 
+}*/
+
+p {
+    line-height: 25px;
+    clear: both;
+}
+
+p img {
+    width: 100%;
+    max-width: 660px;
+}
+
+.btn3 {
+    display: none;
+}
+
+/*@media screen and (min-width: 0px) and (max-width:1000px) {*/
+    .step li {
+        width: 98%;
+    }
+    .step>li>img {
+        transform: rotate(90deg);
+        -webkit-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+    }
+/*}*/
+
+/*@media screen and (min-width: 0px) and (max-width:640px) {*/
+    ol {
+        padding-left: 15px;
+    }
+    .qr {
+        display: none;
+    }
+    .btn3 {
+        display: inline;
+    }
+    .bkw {
+        width: 100%;
+        min-width: 320px;
+    }
+    .indownloadbar {
+        width: 100%;
+        background: url(../images/bk1.jpg) repeat;
+    }
+    table {
+        width: 100%;
+        word-wrap: break-word;
+        word-break: break-all;
+    }
+    .indownloadbar li {
+        width: 90%;
+        height: auto;
+        float: none;
+        margin: 10px 0;
+        border: 2px solid #FFF;
+        background: rgba(0, 0, 0, 0.45);
+        margin: 0 auto;
+        cursor: pointer;
+        color: #fff;
+        font: bolder 25px/45px sans-serif;
+        font-family: Microsoft JhengHei;
+    }
+    .indownloadbar li a{
+        color: #fff;
+        text-decoration: none;
+    }
+    .indownloadbar li img {
+        width: 60%;
+    }
+    .indownloadbar {
+        height: auto;
+    }
+    .indownloadbar:before {
+        clear: both;
+        content: "";
+    }
+    .topbanner {
+        background: url(../images/topbanners.jpg) no-repeat center;
+        position: relative;
+        background-size: cover;
+        width: 100%;
+        overflow: hidden;
+    }
+    .cr {
+        background: url(../images/footer_m.jpg) no-repeat center;
+        background-size: cover;
+        clear: both;
+        width: 100%;
+        height: 0;
+        padding-bottom: 23.4%;
+        margin-top: 0px;
+    }
+    .topbanner {
+        height: 500px;
+    }
+    .infbtn {
+        width: 98%;
+    }
+    /* line 415, ../sass/screen.scss */
+tbody {
+  background: #e4ffe6;
+}
+
+/* line 418, ../sass/screen.scss */
+tr:nth-child(odd) {
+  background-color: rgba(255, 226, 150, 0.3);
+}
+
+/* line 421, ../sass/screen.scss */
+td:nth-child(odd) {
+  background-color: rgba(65, 165, 25, 0.3);
+}
+
+/* line 424, ../sass/screen.scss */
+tr:nth-child(1) {
+  background-color: rgba(125, 107, 57, 0.7);
+}
+/* line 426, ../sass/screen.scss */
+tr:nth-child(1) td p strong {
+  color: white !important;
+}
+
+/* line 430, ../sass/screen.scss */
+td strong {
+  color: #155D09;
+  font-weight: 900;
+  font-size: 16px;
+}
+
+/* line 435, ../sass/screen.scss */
+table {
+  margin: 0 auto;
+}
+
+/* line 348, ../sass/screen.scss */
+.txtdown {
+  font: bolder 16px/20px sans-serif;
+  font-family: Microsoft JhengHei;
+  color: #4a2d0d;
+  text-decoration: underline;
+  font-size: 20px;
+  cursor: pointer;
+  color: #00A7A9;
+}
+
+/* line 355, ../sass/screen.scss */
+.txtdown:hover {
+  color: #20A900;
+}
+/* line 420, ../sass/screen.scss */
+.pagetxt ol {
+  padding-left: 25px;
+}
+/* line 422, ../sass/screen.scss */
+.pagetxt ol li {
+  list-style: decimal !important;
+}
+/*}*/
+
+@media screen and (min-width: 400px) and (max-width:640px) {
+}

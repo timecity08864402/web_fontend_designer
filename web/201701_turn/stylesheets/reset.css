@@ -1,0 +1,109 @@
+@charset "utf-8";
+/* CSS Document */
+/*reset ----------------------*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}table{border-collapse:collapse;border-spacing:0}.clearfix:after,.clearfix:before{content:"";display:table}.clearfix:after{clear:both};
+/*reset end------------------*/
+
+/* == 全部共用區 =============================== */
+.transition{transition: all 1s ease-in-out;-moz-transition: all 1s ease-in-out;-webkit-transition: all 1s ease-in-out;-ms-transition: all 1s ease-in-out;-o-webkit-transition: all 1s ease-in-out;}
+.transition-opacity{transition: opacity 1s ease-in-out;-moz-transition: opacity 1s ease-in-out;-webkit-transition: opacity 1s ease-in-out;-ms-transition: opacity 1s ease-in-out;-o-webkit-transition: opacity 1s ease-in-out;}
+.trans-o-a{overflow:hidden;position:relative;display:inline-block;cursor:pointer;}
+.trans-o-a:hover::before{content:" ";opacity:1;filter:alpha(opacity=100);}
+.trans-o-a::before{content:" ";opacity:0;filter:alpha(opacity=0);position:absolute;left:0;top:0;right:0;bottom:0;transition: opacity 0.3s ease-in-out;-moz-transition: opacity 0.3s ease-in-out;-webkit-transition: opacity 0.3s ease-in-out;-ms-transition: opacity 0.3s ease-in-out;-o-webkit-transition: opacity 0.3s ease-in-out;}
+.trans-3d{-webkit-transition: all 0.56s ease;-moz-transition: all 0.56s ease;-o-transition: all 0.56s ease;transition: all 0.56s ease;filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);opacity: 0;
+	-webkit-transform: rotateX(180deg);-moz-transform: rotateX(180deg);-ms-transform: rotateX(180deg);-o-transform: rotateX(180deg);transform: rotateX(180deg);
+	-webkit-transform-style: preserve-3d;-moz-transform-style: preserve-3d;-ms-transform-style: preserve-3d;-o-transform-style: preserve-3d;transform-style: preserve-3d;}
+.gobar{-webkit-transform: rotateX(0deg)!important;-moz-transform: rotateX(0deg)!important;-ms-transform: rotateX(0deg)!important;-o-transform: rotateX(0deg)!important;transform: rotateX(0deg)!important;
+	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100)!important;opacity: 1!important;}
+*{margin: 0;padding: 0;-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+a{text-decoration: none;}
+.video .video-list a::before{content: "■";margin: 0 5px;color: #052246;line-height: 40px;}
+html,body{ 
+	width:100%;
+	height:auto;
+	min-width:1000px; 
+	font-size:100%;
+	font-family: "微軟正黑體",Microsoft JhengHei,"Helvetica Neue", Arial, Helvetica, sans-serif;
+	-webkit-text-size-adjust:none;
+}
+.loadpic{display: none;}
+.bgcover{-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover;}
+.box{width: 1000px;margin: 0 auto;position: relative;z-index:666;overflow:hidden;}
+/*top black bar +fb in line btn*/
+
+/*newslistpage*/
+.list-page .imp h4{background: #ee4e6d;}
+.list-page .imp h4:after{border-color: transparent transparent transparent #ee4e6d;}
+.list-page .imp h4:before{content: "重要";}
+.list-page .act h4{background: #4a67b9;}
+.list-page .act h4:after{border-color: transparent transparent transparent #4a67b9;}
+.list-page .act h4:before{content: "活動";}
+.list-page .sys h4{background: #888888;}
+.list-page .sys h4:after{border-color: transparent transparent transparent #888888;}
+.list-page .sys h4:before{content: "系統";}
+
+/*newspage*/
+.in-newspage .imp h4{background: #ee4e6d;}
+.in-newspage .imp h4:after{border-color: transparent transparent transparent #ee4e6d;}
+.in-newspage .imp h4:before{content: "重要";}
+.in-newspage .act h4{background: #4a67b9;}
+.in-newspage .act h4:after{border-color: transparent transparent transparent #4a67b9;}
+.in-newspage .act h4:before{content: "活動";}
+.in-newspage .sys h4{background: #888888;}
+.in-newspage .sys h4:after{border-color: transparent transparent transparent #888888;}
+.in-newspage .sys h4:before{content: "系統";}
+
+
+/* == 手機版型區 =============================== */
+/*@media screen and (min-width: 360px) and (max-width: 640px) {*/
+@media screen and (max-width: 1024px) {
+html,body{ 
+	min-width:320px;
+	font-size:100%;
+}
+.box{
+	width: 100%;
+	margin: 0 auto;
+}
+
+
+/*header apk-------------------手機版*/
+.apkbox{
+	width: 260px; background-color: rgba(255,255,255,0);border:none; margin: 0 auto;padding:0;
+
+}
+.apkbtnbox{
+	display: table-cell;
+   	vertical-align: middle;
+   	width: 255px;height: 190px;padding-top: 0px;/* height: 270px */
+}
+.qrcode{
+	display: none;
+}
+
+/*內頁刊頭 apkbox-----------------手機版*/
+.header.page .apkbox{
+	display: block!important;margin-top: 300px;margin-right: 30px;
+}
+
+/*內頁右側 apkbox-----------------手機版*/
+.section2 .apkbox{
+	display: none!important;
+}
+
+
+/* == ipad=============================== */
+ 
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+html,body{ 
+	font-size:120%;
+}
+}
+@media screen and (max-width: 1024px) and (min-width: 768px) and (orientation: landscape) {
+
+
+}

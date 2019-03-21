@@ -1,0 +1,840 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+@import url(reset.css);
+/* line 5, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/*
+@include POS(475px,75px);
+@include css3(transition,all 1s ease);
+@include css3(box-shadow,0px 0px 14px #ffffff);
+@include css3(border-radius,20px);
+border: 2px solid #6d4b00;
+left: calc(50% - 82.5px);
+
+
+.tablestyle{
+    table{
+        margin: 0 auto;
+        border-collapse: separate;
+        border-spacing: 2px!important;
+        font-size: 16px;
+        line-height:1.5;
+    }
+    table tr td{
+        text-align: center;
+        padding: 5px;
+    }
+    table tr:nth-child(odd) {
+          background-color: rgba(76, 46, 0, 0.17);
+        }
+        span{
+            @include midtext();
+            font-size: 23px;
+        }
+}
+*/
+/*
+@include css3(transition,all 1s ease);
+@include css3(animation,opacitylight 2s infinite linear);
+@include keyframes(opacitylight) {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+*/
+/*
+@media screen and (min-width: 0px) and (max-width:640px) {}
+@media screen and (min-width: 641px) and (max-width:1200px) {}
+@media screen and (min-width: 1201px) and (max-width:2000px) {}
+*/
+/*zindex*/
+/*midtext*/
+/*stext*/
+/*btn*/
+/*specify*/
+/*keyframes*/
+/*Responsive*/
+/*radius*/
+/*boxshadow*/
+/*POS*/
+/*SIZE*/
+/*clearfix*/
+/*changebg*/
+/*animated-picandtxt*/
+/* line 236, ../sass/screen.scss */
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* line 240, ../sass/screen.scss */
+li {
+  list-style: none;
+}
+
+/* line 244, ../sass/screen.scss */
+body {
+  width: 100%;
+  background: url(../images/txtbg.png);
+  min-width: 1000px;
+  font: normal 14px/20px "Microsoft JhengHei";
+}
+
+/* line 251, ../sass/screen.scss */
+.wrapper {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  overflow: hidden;
+  min-width: 1000px;
+}
+
+/* line 258, ../sass/screen.scss */
+.wrapper-in {
+  width: 1000px;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* line 264, ../sass/screen.scss */
+.topbanner {
+  position: relative;
+  background: url(../images/bg.jpg) top center;
+  height: 805px;
+}
+/* line 268, ../sass/screen.scss */
+.topbanner .topbar {
+  height: 50px;
+  width: 100%;
+  position: relative;
+  background: rgba(255, 255, 255, 0.5);
+  -webkit-transition: all 0.8s ease;
+  -moz-transition: all 0.8s ease;
+  -ms-transition: all 0.8s ease;
+  -o-transition: all 0.8s ease;
+  transition: all 0.8s ease;
+}
+/* line 274, ../sass/screen.scss */
+.topbanner .topbar:hover {
+  background: rgba(255, 255, 255, 0.8);
+}
+/* line 277, ../sass/screen.scss */
+.topbanner .topbar .logo {
+  float: left;
+}
+/* line 278, ../sass/screen.scss */
+.topbanner .topbar ul {
+  float: right;
+  position: relative;
+}
+/* line 281, ../sass/screen.scss */
+.topbanner .topbar ul li {
+  float: left;
+  color: #000;
+  line-height: 50px;
+  font-size: 15px;
+  padding: 0 13px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+/* line 289, ../sass/screen.scss */
+.topbanner .topbar ul li:hover {
+  background: #1d6d92;
+  color: #fff;
+}
+/* line 294, ../sass/screen.scss */
+.topbanner .topbar ul .loginbtn {
+  background: #bc0010;
+  color: #fff;
+}
+/* line 297, ../sass/screen.scss */
+.topbanner .topbar ul .loginbtn:hover {
+  background: #ff0000;
+}
+/* line 304, ../sass/screen.scss */
+.topbanner .bannerup > * {
+  position: absolute;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  opacity: 1;
+}
+/* line 305, ../sass/screen.scss */
+.topbanner .bannerup .map {
+  top: 317px;
+  left: 680px;
+  -webkit-transform-origin: left bottom;
+  -moz-transform-origin: left bottom;
+  -ms-transform-origin: left bottom;
+  -o-transform-origin: left bottom;
+  transform-origin: left bottom;
+  -webkit-transition: all 0.6s 0.1s ease;
+  -moz-transition: all 0.6s 0.1s ease;
+  -ms-transition: all 0.6s 0.1s ease;
+  -o-transition: all 0.6s 0.1s ease;
+  transition: all 0.6s 0.1s ease;
+}
+/* line 311, ../sass/screen.scss */
+.topbanner .bannerup .peo-1 {
+  top: 195px;
+  left: 275px;
+  z-index: 10;
+  -webkit-transition: all 1s 0.2s ease;
+  -moz-transition: all 1s 0.2s ease;
+  -ms-transition: all 1s 0.2s ease;
+  -o-transition: all 1s 0.2s ease;
+  transition: all 1s 0.2s ease;
+}
+/* line 318, ../sass/screen.scss */
+.topbanner .bannerup .peo-1.poeout {
+  top: 250px;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+/* line 322, ../sass/screen.scss */
+.topbanner .bannerup .peo-2 {
+  top: 120px;
+  left: -70px;
+  z-index: 4;
+  -webkit-transform-origin: left bottom;
+  -moz-transform-origin: left bottom;
+  -ms-transform-origin: left bottom;
+  -o-transform-origin: left bottom;
+  transform-origin: left bottom;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  -webkit-transform: rotate(-360deg);
+  -moz-transform: rotate(-360deg);
+  -ms-transform: rotate(-360deg);
+  -o-transform: rotate(-360deg);
+  transform: rotate(-360deg);
+}
+/* line 330, ../sass/screen.scss */
+.topbanner .bannerup .peo-3 {
+  top: 320px;
+  left: 605px;
+  z-index: 4;
+  -webkit-transform-origin: left bottom;
+  -moz-transform-origin: left bottom;
+  -ms-transform-origin: left bottom;
+  -o-transform-origin: left bottom;
+  transform-origin: left bottom;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+/* line 338, ../sass/screen.scss */
+.topbanner .bannerup .slogan {
+  top: 50px;
+  -webkit-transition: opacity 0.8s 0.3s ease;
+  -moz-transition: opacity 0.8s 0.3s ease;
+  -ms-transition: opacity 0.8s 0.3s ease;
+  -o-transition: opacity 0.8s 0.3s ease;
+  transition: opacity 0.8s 0.3s ease;
+}
+/* line 342, ../sass/screen.scss */
+.topbanner .bannerup .slogan.poeout {
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+/* line 345, ../sass/screen.scss */
+.topbanner .bannerup .poeout {
+  opacity: 0;
+  -webkit-transform: rotate(-180deg);
+  -moz-transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
+  -o-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+}
+/* line 351, ../sass/screen.scss */
+.topbanner .ground-1 {
+  position: absolute;
+  background: url(../images/ground_1.png) repeat-x;
+  width: 100%;
+  height: 120px;
+  bottom: 0;
+  z-index: 5;
+  -webkit-animation: Animation_bg 20s infinite linear;
+  -moz-animation: Animation_bg 20s infinite linear;
+  -ms-animation: Animation_bg 20s infinite linear;
+  -o-animation: Animation_bg 20s infinite linear;
+  animation: Animation_bg 20s infinite linear;
+}
+/* line 360, ../sass/screen.scss */
+.topbanner .ground-2 {
+  position: absolute;
+  background: url(../images/ground_2.png) repeat-x;
+  width: 100%;
+  height: 120px;
+  bottom: 65px;
+  -webkit-animation: Animation_bg2 5s infinite linear;
+  -moz-animation: Animation_bg2 5s infinite linear;
+  -ms-animation: Animation_bg2 5s infinite linear;
+  -o-animation: Animation_bg2 5s infinite linear;
+  animation: Animation_bg2 5s infinite linear;
+}
+@-webkit-keyframes Animation_bg {
+  0% {
+    background-position: 902px;
+  }
+  100% {
+    background-position: 0px;
+  }
+}
+@-moz-keyframes Animation_bg {
+  0% {
+    background-position: 902px;
+  }
+  100% {
+    background-position: 0px;
+  }
+}
+@-o-keyframes Animation_bg {
+  0% {
+    background-position: 902px;
+  }
+  100% {
+    background-position: 0px;
+  }
+}
+@keyframes Animation_bg {
+  0% {
+    background-position: 902px;
+  }
+  100% {
+    background-position: 0px;
+  }
+}
+@-webkit-keyframes Animation_bg2 {
+  0% {
+    background-position: -902px;
+  }
+  100% {
+    background-position: 0px;
+  }
+}
+@-moz-keyframes Animation_bg2 {
+  0% {
+    background-position: -902px;
+  }
+  100% {
+    background-position: 0px;
+  }
+}
+@-o-keyframes Animation_bg2 {
+  0% {
+    background-position: -902px;
+  }
+  100% {
+    background-position: 0px;
+  }
+}
+@keyframes Animation_bg2 {
+  0% {
+    background-position: -902px;
+  }
+  100% {
+    background-position: 0px;
+  }
+}
+/* line 378, ../sass/screen.scss */
+.databox table {
+  margin: 0 !important;
+}
+/* line 381, ../sass/screen.scss */
+.databox strong {
+  color: #fff9a8;
+}
+/* line 384, ../sass/screen.scss */
+.databox .boxtietle {
+  font: bolder 25px/50px sans-serif !important;
+}
+
+/* line 388, ../sass/screen.scss */
+.outdatabox {
+  cursor: pointer;
+}
+
+/* line 391, ../sass/screen.scss */
+.successbox, .searchbox, .databox {
+  background: url(../images/txtbg.png);
+  text-align: center;
+}
+/* line 394, ../sass/screen.scss */
+.successbox .sbtn, .searchbox .sbtn, .databox .sbtn {
+  line-height: 30px !important;
+  font-size: 15px !important;
+  padding: 3px 15px !important;
+  margin-bottom: 10px !important;
+}
+/* line 400, ../sass/screen.scss */
+.successbox .boxtietle, .searchbox .boxtietle, .databox .boxtietle {
+  font: bolder 25px/50px "Microsoft JhengHei";
+  color: #fff;
+  -webkit-box-shadow: 0px 0px 14px black;
+  -moz-box-shadow: 0px 0px 14px black;
+  -ms-box-shadow: 0px 0px 14px black;
+  -o-box-shadow: 0px 0px 14px black;
+  box-shadow: 0px 0px 14px black;
+  text-shadow: 2px 2px 10px #000000;
+  cursor: default;
+  margin-bottom: 10px;
+}
+/* line 408, ../sass/screen.scss */
+.successbox select, .searchbox select, .databox select {
+  width: 150px;
+  height: 25px;
+  vertical-align: middle;
+}
+/* line 413, ../sass/screen.scss */
+.successbox input, .searchbox input, .databox input {
+  width: 30px;
+  height: 12px;
+  vertical-align: middle;
+  margin: 0 10px;
+}
+/* line 419, ../sass/screen.scss */
+.successbox .pageenter, .searchbox .pageenter, .databox .pageenter {
+  border: 2px solid #37daff;
+  margin-left: 10px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  line-height: 30px;
+  font-size: 15px;
+  padding: 2px 10px;
+  margin-bottom: 10px;
+}
+/* line 427, ../sass/screen.scss */
+.successbox .pageenter:hover, .searchbox .pageenter:hover, .databox .pageenter:hover {
+  background: #37daff;
+  color: #000;
+}
+/* line 432, ../sass/screen.scss */
+.successbox .active, .searchbox .active, .databox .active {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  border: 3px solid #ff7600;
+  width: 20px;
+  margin: auto;
+}
+
+/* line 439, ../sass/screen.scss */
+.content.wrapper {
+  overflow: inherit;
+}
+
+/* line 442, ../sass/screen.scss */
+.content, .successbox, .searchbox, .databox {
+  font: normal 15px/20px "Microsoft JhengHei";
+  color: #ecffe7;
+}
+/* line 445, ../sass/screen.scss */
+.content table, .successbox table, .searchbox table, .databox table {
+  width: 100%;
+  margin: 5px auto;
+  border-collapse: separate;
+  border-spacing: 2px !important;
+  font-size: 14px;
+  line-height: 20px;
+  color: #fff;
+}
+/* line 453, ../sass/screen.scss */
+.content table .table-tietle, .successbox table .table-tietle, .searchbox table .table-tietle, .databox table .table-tietle {
+  background: #153c58;
+  color: #ffe998;
+}
+/* line 457, ../sass/screen.scss */
+.content table .tablecolor1, .successbox table .tablecolor1, .searchbox table .tablecolor1, .databox table .tablecolor1 {
+  color: #ffc800;
+}
+/* line 460, ../sass/screen.scss */
+.content table .tablecolor2, .successbox table .tablecolor2, .searchbox table .tablecolor2, .databox table .tablecolor2 {
+  color: #00ffb8;
+}
+/* line 464, ../sass/screen.scss */
+.content table tbody, .successbox table tbody, .searchbox table tbody, .databox table tbody {
+  background: #18695a;
+}
+/* line 467, ../sass/screen.scss */
+.content table tr td, .successbox table tr td, .searchbox table tr td, .databox table tr td {
+  text-align: center;
+  padding: 5px;
+}
+/* line 471, ../sass/screen.scss */
+.content table tr:nth-child(even), .successbox table tr:nth-child(even), .searchbox table tr:nth-child(even), .databox table tr:nth-child(even) {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+/* line 474, ../sass/screen.scss */
+.content h1, .successbox h1, .searchbox h1, .databox h1 {
+  font: bolder 40px/60px "Microsoft JhengHei";
+  letter-spacing: 2px;
+  padding-top: 3px;
+  color: #fff;
+  background: linear-gradient(#395500, #1a2700);
+  text-align: center;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  -ms-border-radius: 100px;
+  -o-border-radius: 100px;
+  border-radius: 100px;
+  -webkit-box-shadow: 0px 0px 14px black;
+  -moz-box-shadow: 0px 0px 14px black;
+  -ms-box-shadow: 0px 0px 14px black;
+  -o-box-shadow: 0px 0px 14px black;
+  box-shadow: 0px 0px 14px black;
+  text-shadow: 2px 2px 10px #000000;
+  cursor: default;
+  margin-bottom: 10px;
+}
+/* line 491, ../sass/screen.scss */
+.content a, .successbox a, .searchbox a, .databox a {
+  color: #37daff;
+}
+/* line 494, ../sass/screen.scss */
+.content .tietle, .successbox .tietle, .searchbox .tietle, .databox .tietle {
+  font: bolder 25px/40px "Microsoft JhengHei";
+  color: #fff685;
+  margin-top: 15px;
+}
+/* line 498, ../sass/screen.scss */
+.content .tietle span, .successbox .tietle span, .searchbox .tietle span, .databox .tietle span {
+  font-size: 15px;
+  color: #fff24d;
+}
+/* line 503, ../sass/screen.scss */
+.content section, .successbox section, .searchbox section, .databox section {
+  padding: 10px 0;
+}
+/* line 506, ../sass/screen.scss */
+.content .alerttxt, .successbox .alerttxt, .searchbox .alerttxt, .databox .alerttxt {
+  color: #fff9a8;
+}
+/* line 509, ../sass/screen.scss */
+.content .rightnav, .successbox .rightnav, .searchbox .rightnav, .databox .rightnav {
+  position: absolute;
+  right: -165px;
+  display: none;
+  -webkit-transition: top 1s ease;
+  -moz-transition: top 1s ease;
+  -ms-transition: top 1s ease;
+  -o-transition: top 1s ease;
+  transition: top 1s ease;
+}
+/* line 514, ../sass/screen.scss */
+.content .rightnav .dotline, .successbox .rightnav .dotline, .searchbox .rightnav .dotline, .databox .rightnav .dotline {
+  border-right: 2px solid #fff;
+  width: 60px;
+}
+/* line 517, ../sass/screen.scss */
+.content .rightnav .dotline li, .successbox .rightnav .dotline li, .searchbox .rightnav .dotline li, .databox .rightnav .dotline li {
+  position: relative;
+  text-align: right;
+  margin-bottom: 130px;
+  padding-right: 20px;
+  line-height: 15px;
+  cursor: pointer;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+/* line 525, ../sass/screen.scss */
+.content .rightnav .dotline li:after, .successbox .rightnav .dotline li:after, .searchbox .rightnav .dotline li:after, .databox .rightnav .dotline li:after {
+  position: absolute;
+  content: "";
+  width: 13px;
+  height: 13px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  background: #fff;
+  right: -8px;
+  top: 0;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+/* line 537, ../sass/screen.scss */
+.content .rightnav .dotline li:hover, .successbox .rightnav .dotline li:hover, .searchbox .rightnav .dotline li:hover, .databox .rightnav .dotline li:hover {
+  color: #fff000;
+}
+/* line 539, ../sass/screen.scss */
+.content .rightnav .dotline li:hover:after, .successbox .rightnav .dotline li:hover:after, .searchbox .rightnav .dotline li:hover:after, .databox .rightnav .dotline li:hover:after {
+  width: 9px;
+  height: 9px;
+  border: 3px solid #fff;
+  background: #1a2700;
+}
+/* line 547, ../sass/screen.scss */
+.content .rightnav .dotline .top, .successbox .rightnav .dotline .top, .searchbox .rightnav .dotline .top, .databox .rightnav .dotline .top {
+  margin-bottom: 30px;
+}
+/* line 550, ../sass/screen.scss */
+.content .rightnav .dotline a, .successbox .rightnav .dotline a, .searchbox .rightnav .dotline a, .databox .rightnav .dotline a {
+  color: #fff;
+}
+/* line 553, ../sass/screen.scss */
+.content .rightnav .dotline .active, .successbox .rightnav .dotline .active, .searchbox .rightnav .dotline .active, .databox .rightnav .dotline .active {
+  color: #fff000;
+}
+/* line 555, ../sass/screen.scss */
+.content .rightnav .dotline .active:after, .successbox .rightnav .dotline .active:after, .searchbox .rightnav .dotline .active:after, .databox .rightnav .dotline .active:after {
+  width: 9px;
+  height: 9px;
+  border: 3px solid #fff;
+  background: #1a2700;
+}
+/* line 563, ../sass/screen.scss */
+.content .rightnav .digin, .successbox .rightnav .digin, .searchbox .rightnav .digin, .databox .rightnav .digin {
+  background: url(../images/totop_1.png);
+  width: 130px;
+  height: 100px;
+}
+/* line 568, ../sass/screen.scss */
+.content .rightnav .digin2, .successbox .rightnav .digin2, .searchbox .rightnav .digin2, .databox .rightnav .digin2 {
+  background: url(../images/totop_2.png) !important;
+}
+/* line 572, ../sass/screen.scss */
+.content .btnout, .successbox .btnout, .searchbox .btnout, .databox .btnout {
+  text-align: center;
+  margin-bottom: 20px;
+}
+/* line 576, ../sass/screen.scss */
+.content .btn, .successbox .btn, .searchbox .btn, .databox .btn {
+  background: #ffc800;
+  background: linear-gradient(#ffc800, #ffa500);
+  color: #444444;
+  padding: 10px 20px;
+  line-height: 60px;
+  font-size: 20px;
+  margin: 0 5px;
+  cursor: pointer;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+  border-radius: 30px;
+  -webkit-box-shadow: 0px 0px 14px black;
+  -moz-box-shadow: 0px 0px 14px black;
+  -ms-box-shadow: 0px 0px 14px black;
+  -o-box-shadow: 0px 0px 14px black;
+  box-shadow: 0px 0px 14px black;
+}
+/* line 588, ../sass/screen.scss */
+.content .btn:hover, .successbox .btn:hover, .searchbox .btn:hover, .databox .btn:hover {
+  background: #de0000;
+  color: #fff;
+}
+/* line 593, ../sass/screen.scss */
+.content .btn.active, .successbox .btn.active, .searchbox .btn.active, .databox .btn.active {
+  background: #de0000;
+  color: #fff;
+}
+/* line 597, ../sass/screen.scss */
+.content .tobtnpage, .successbox .tobtnpage, .searchbox .tobtnpage, .databox .tobtnpage {
+  padding: 15px 10%;
+}
+/* line 601, ../sass/screen.scss */
+.content .btnpage1 .btnout, .successbox .btnpage1 .btnout, .searchbox .btnpage1 .btnout, .databox .btnpage1 .btnout {
+  margin-top: 40px;
+}
+/* line 604, ../sass/screen.scss */
+.content .btnpage1 .time3, .successbox .btnpage1 .time3, .searchbox .btnpage1 .time3, .databox .btnpage1 .time3 {
+  position: relative;
+}
+/* line 606, ../sass/screen.scss */
+.content .btnpage1 .time3:before, .successbox .btnpage1 .time3:before, .searchbox .btnpage1 .time3:before, .databox .btnpage1 .time3:before {
+  content: attr(data-txt);
+  background: #d9444a;
+  color: #fff;
+  padding: 0px 10px;
+  line-height: 25px;
+  font-size: 16px;
+  position: absolute;
+  left: 0;
+  top: -30px;
+  white-space: pre;
+}
+/* line 618, ../sass/screen.scss */
+.content .btnpage1 .time3:after, .successbox .btnpage1 .time3:after, .searchbox .btnpage1 .time3:after, .databox .btnpage1 .time3:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-width: 8px;
+  border-style: solid;
+  border-color: #d9444a transparent transparent #d9444a;
+}
+/* line 630, ../sass/screen.scss */
+.content .btnpage2 .btn, .successbox .btnpage2 .btn, .searchbox .btnpage2 .btn, .databox .btnpage2 .btn {
+  line-height: 30px;
+  font-size: 15px;
+  padding: 3px 15px;
+}
+/* line 635, ../sass/screen.scss */
+.content .btnpage2 .active, .successbox .btnpage2 .active, .searchbox .btnpage2 .active, .databox .btnpage2 .active {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  border: 3px solid #ff7600;
+}
+/* line 640, ../sass/screen.scss */
+.content .btnpage, .successbox .btnpage, .searchbox .btnpage, .databox .btnpage {
+  border: 10px solid #2c3e0a;
+  padding: 30px 50px;
+  margin: 20px 0;
+  display: none;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+  border-radius: 30px;
+  -webkit-box-shadow: 0px 0px 14px black;
+  -moz-box-shadow: 0px 0px 14px black;
+  -ms-box-shadow: 0px 0px 14px black;
+  -o-box-shadow: 0px 0px 14px black;
+  box-shadow: 0px 0px 14px black;
+}
+/* line 648, ../sass/screen.scss */
+.content .divtable, .successbox .divtable, .searchbox .divtable, .databox .divtable {
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+/* line 652, ../sass/screen.scss */
+.content .divtable .divtr .divtd, .successbox .divtable .divtr .divtd, .searchbox .divtable .divtr .divtd, .databox .divtable .divtr .divtd {
+  float: left;
+  width: calc(50% - 1px);
+  border-right: 2px solid #0b1000;
+  text-align: center;
+  font: bolder 25px/40px "Microsoft JhengHei";
+}
+/* line 658, ../sass/screen.scss */
+.content .divtable .divtr .divtd:last-child, .successbox .divtable .divtr .divtd:last-child, .searchbox .divtable .divtr .divtd:last-child, .databox .divtable .divtr .divtd:last-child {
+  border-right: 0px solid #0b1000;
+}
+/* line 661, ../sass/screen.scss */
+.content .divtable .divtr .divtd select, .successbox .divtable .divtr .divtd select, .searchbox .divtable .divtr .divtd select, .databox .divtable .divtr .divtd select {
+  width: 150px;
+  height: 30px;
+  vertical-align: middle;
+}
+
+/* line 671, ../sass/screen.scss */
+.alertbox > * {
+  display: none;
+}
+
+/* line 675, ../sass/screen.scss */
+.cr {
+  background: #0e1500;
+  padding-top: 10px;
+  margin-top: 30px;
+}

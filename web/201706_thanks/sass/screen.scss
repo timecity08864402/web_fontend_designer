@@ -1,0 +1,529 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+@import "reset.css";
+
+
+
+/*
+@include POS(475px,75px);
+@include css3(transition,all 1s ease);
+@include css3(box-shadow,0px 0px 14px #ffffff);
+@include css3(border-radius,20px);
+border: 2px solid #6d4b00;
+left: calc(50% - 82.5px);
+
+
+.tablestyle{
+    table{
+        margin: 0 auto;
+        border-collapse: separate;
+        border-spacing: 2px!important;
+        font-size: 16px;
+        line-height:1.5;
+    }
+    table tr td{
+        text-align: center;
+        padding: 5px;
+    }
+    table tr:nth-child(odd) {
+          background-color: rgba(76, 46, 0, 0.17);
+        }
+        span{
+            @include midtext();
+            font-size: 23px;
+        }
+}
+*/
+
+
+
+/*
+@include css3(transition,all 1s ease);
+@include css3(animation,opacitylight 2s infinite linear);
+@include keyframes(opacitylight) {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+*/
+
+/*
+@media screen and (min-width: 0px) and (max-width:640px) {}
+@media screen and (min-width: 641px) and (max-width:1200px) {}
+@media screen and (min-width: 1201px) and (max-width:2000px) {}
+*/
+
+
+
+
+
+
+
+/*zindex*/
+
+@mixin zindex() {
+    z-index: 999;
+}
+
+
+/*midtext*/
+
+@mixin midtext() {
+    font: bold 20px/40px sans-serif;
+    font-family: Microsoft JhengHei;
+    letter-spacing: 1px;
+}
+
+
+/*stext*/
+
+@mixin stext() {
+    font: bolder 14px/15px sans-serif;
+    font-family: Microsoft JhengHei;
+    color: #fff;
+}
+/*btn*/
+
+@mixin btntext() {
+    font: bolder 25px/45px sans-serif;
+    font-family: Microsoft JhengHei;
+}
+
+
+/*specify*/
+
+@mixin css3($property, $value) {
+    @each $prefix in -webkit-,
+    -moz-,
+    -ms-,
+    -o-,
+    '' {
+        #{$prefix}#{$property}: $value;
+    }
+}
+
+
+/*keyframes*/
+
+@mixin keyframes($animationName) {
+    @-webkit-keyframes #{$animationName} {
+        @content;
+    }
+    @-moz-keyframes #{$animationName} {
+        @content;
+    }
+    @-o-keyframes #{$animationName} {
+        @content;
+    }
+    @keyframes #{$animationName} {
+        @content;
+    }
+}
+
+
+/*Responsive*/
+
+@mixin Responsive($point) {
+    @if $point==large {
+        @media (min-width: 2000px) {
+            @content;
+        }
+    }
+    @else if $point==medium {
+        @media (min-width: 1200em) {
+            @content;
+        }
+    }
+    @else if $point==small {
+        @media (min-width: 640em) {
+            @content;
+        }
+    }
+}
+
+
+/*radius*/
+
+@mixin border-radius($angle) {
+    border-radius: $angle;
+    -webkit-border-radius: $angle;
+    -moz-border-radius: $angle;
+    -ms-border-radius: $angle;
+    -o-border-radius: $angle;
+}
+
+
+/*boxshadow*/
+
+@mixin boxshadow($shx, $shy, $shblur, $shcolor) {
+    box-shadow: $shx $shy $shblur $shcolor;
+    -webkit-box-shadow: $shx $shy $shblur $shcolor;
+    -moz-box-shadow: $shx $shy $shblur $shcolor;
+    -ms-border-radius: $shx $shy $shblur $shcolor;
+    -o-box-shadow: $shx $shy $shblur $shcolor;
+}
+
+
+/*POS*/
+
+@mixin POS($top, $left) {
+    position: absolute;
+    top: $top;
+    left: $left;
+}
+
+
+/*SIZE*/
+
+@mixin SIZE($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+
+/*clearfix*/
+
+@mixin clearfix() {
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+
+/*changebg*/
+
+@mixin bg($name, $bg) {
+    background: url("../images/#{$name}.#{$bg}");
+    width: image-width("../images/#{$name}.#{$bg}");
+    height: image-height("../images/#{$name}.#{$bg}");
+}
+
+
+/*animated-picandtxt*/
+
+a{
+    text-decoration: none;
+}
+li {
+    list-style: none;
+}
+
+body {
+    width: 100%;
+    background: #000;
+    min-width: 1000px;
+}
+
+.wrapper {
+    width:100%;
+    height:auto;
+    margin:0 auto;
+    min-width: 1000px;
+}
+.wrapper-in{
+    width: 1000px;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+.topbanner{
+    position: relative;
+    background: url(../images/bg.jpg) top center;
+    width: 100%;
+    height: 1200px;
+    margin-bottom: -120px;
+    overflow:hidden;
+    &:after{
+        content: "";
+        position: absolute;
+        background: url(../images/bg2.jpg) top center;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        @include css3(transition,all 1s ease);
+        @include css3(animation,cssAnimation_light 3s infinite linear);
+    }
+    .logo{
+        position: absolute;
+        top: 100px;
+        left: 0;
+        width: 570px;
+        height: 160px;
+        cursor: pointer;
+    }
+    .list{
+        position: absolute;
+        top: 430px;
+        left: 60px;
+        li{
+            float: left;
+            position: relative;
+            width: 100px;
+            height: 350px;
+            cursor: pointer;
+        }
+        .listbtn-sp{
+            background: url(../images/list_sp.png);
+            position: relative;
+            &:after{
+                position: absolute;
+                top:0;
+                left: 0;
+                content: "";
+                background: url(../images/list_sp.png);
+                background-position: -100px 0;
+                width: 100px;
+                height: 350px;
+                opacity: 0;
+                @include css3(transition,all .5s ease);
+                @include css3(animation,opacitylight .08s infinite linear);
+            }
+            &:hover:after{
+                opacity: 1!important;
+                @include css3(animation,none);
+            }
+        }
+        .listbtn{
+            /*margin-right: -15px;*/
+            &:after{
+                position: absolute;
+                top:0;
+                left: 0;
+                content: "";
+                background: url(../images/listbg_a.png);
+                width: 100px;
+                height: 350px;
+                opacity: 0;
+                @include css3(transition,all .3s cubic-bezier(0,1,.61,1));
+                z-index: 2;
+            }
+            &:hover:after{
+                height: 350px;
+                opacity: 1;
+            }
+            &:before{
+                position: absolute;
+                top: 50px;
+                left: 0;
+                content: "";
+                background: url(../images/listbg_b.png) bottom;
+                width: 100px;
+                height: 0px;
+                opacity: 0;
+                @include css3(transition,all .3s cubic-bezier(0,1,.61,1));
+                z-index: 1;
+            }
+            &:hover:before{
+                height: 300px;
+                opacity: 1;
+            }
+            .listbtn-txt{
+                width: 100px;
+                height: 350px;
+                background: url(../images/list_txt.png);
+                z-index: 5;
+                position: relative;
+                &:after{
+                    position: absolute;
+                    top:0;
+                    left: 0;
+                    content: "";
+                    background: url(../images/list_txt.png);
+                    width: 100px;
+                    height: 350px;
+                    background-position: 0 -350px;
+                    opacity: 0;
+                    @include css3(transition,all .3s ease);
+                }
+                &:hover:after{
+                    opacity: 1;
+                }
+            }
+        }  
+    }
+    .list li:nth-child(3){.listbtn-txt{background-position: -100px 0;&:after{background-position: -100px -350px;}}}
+    .list li:nth-child(4){.listbtn-txt{background-position: -200px 0;&:after{background-position: -200px -350px;}}}
+    .list li:nth-child(5){.listbtn-txt{background-position: -300px 0;&:after{background-position: -300px -350px;}}}
+    .list li:nth-child(6){.listbtn-txt{background-position: -400px 0;&:after{background-position: -400px -350px;}}}
+}
+
+@include keyframes(opacitylight) {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: .5;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@include keyframes(cssAnimation_light) {
+    0%  {opacity: 0;}
+    50%  {opacity: 1;}
+    100%  {opacity: 0;}
+}
+.topbtn{
+    background: #000;
+    position: fixed;
+    right: 0;
+    top:20px;
+    @include css3(border-radius,10px 0 0 10px);
+    padding: 0px 25px;
+    padding-right: 50px;
+    cursor: default;
+    z-index: 99;
+    color: #eabd5a;
+    font: normal 15px/35px "Microsoft JhengHei";
+    .txtbtn{
+        margin: 0 6px;
+    }
+    a{
+        color: #eabd5a;
+        @include css3(transition,all .5s ease);
+        float: left;
+        &:hover{
+            color: #ff7600;
+        }
+        .iconbtn{
+            position: relative;
+            width: 26px;
+            height: 25px;
+            background: url(../images/topbtn.png);
+            margin: 5px 2px;
+            opacity: .5;
+            @include css3(transition,all .5s ease);
+            &:hover{
+                opacity: 1;
+            }
+        }
+        .bh-btn{background-position: 0 0;}
+        .gd-btn{background-position: -30px 0;}
+        .fbshare-btn{background-position: -60px 0;}
+        .fb-btn{background-position: -90px 0;opacity: 1;
+            &:after{
+                position: absolute;
+                top:0;
+                left: 0;
+                width: 26px;
+                height: 25px;
+                content: "";
+                background: url(../images/topbtn.png);
+                background-position: -90px -30px;
+                opacity: 0;
+                @include css3(transition,all .5s ease);
+            }
+            &:hover:after{
+                opacity: 1;
+            }
+        }
+    }
+}
+.content{
+    border-bottom: 2px solid #131313;
+    top: 0px;
+    position: relative;
+    @include css3(transition,all .5s ease);
+    .page{
+        display: none;
+    }
+    .tietle-big{
+        position: relative;
+        background: url(../images/tietlebk.png);
+        width: 1000px;
+        height: 500px;
+        margin-left: -150px;
+        margin-top: -500px;
+        overflow: hidden;
+        img{
+            position: absolute;
+            top:150px;
+            left:200px;
+        }
+    }
+    .close{
+        position: absolute;
+        top: 165px;
+        left: 480px;
+        cursor: pointer;
+        z-index: 2;
+    }
+    .content-txt{
+        position: relative;
+        margin: -180px 0px 50px 80px;
+        font: normal 15px/22px "Microsoft JhengHei";
+        color: #cbc2ab;
+        .tietle{
+            font-size: 20px;
+            letter-spacing: 2px;
+            line-height: 35px;
+            color: #efe5cc;
+            font-weight: bolder;
+        }
+        .alert-txt{
+            color: #c10022;
+
+        }
+        .list-li{
+            li{
+                display: list-item;
+                list-style-type: decimal;
+                text-indent: -15px;
+                padding-left: 15px;
+            }
+        }
+        table{ 
+            border-collapse: separate;
+            border-spacing: 5px !important;
+            tr{
+                background-color: #750013;
+                th ,td{
+                    text-align: center;
+                    padding:5px;
+                    a{
+                        color: #cbc2ab;
+                    }
+                }
+                th{
+                    font-size: 18px;
+                    background: #983f00;
+                    color: #feffd0;
+                }
+            }
+        }
+    }
+    .content-br{
+        border-bottom: 2px solid #313131;
+        margin-top: 40px;
+        margin-bottom: 20px;
+        width: 80%;
+    }
+}
+.content-out{
+    top: 500px;
+}
+
+.cr{
+    text-align: center;
+    position: relative;
+    img{
+        vertical-align: middle;
+    }
+}

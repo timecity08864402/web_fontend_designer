@@ -1,0 +1,679 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+@import "reset.css";
+
+
+
+/*
+@include POS(475px,75px);
+@include css3(transition,all 1s ease);
+@include css3(box-shadow,0px 0px 14px #ffffff);
+@include css3(border-radius,20px);
+border: 2px solid #6d4b00;
+left: calc(50% - 82.5px);
+
+
+.tablestyle{
+    table{
+        margin: 0 auto;
+        border-collapse: separate;
+        border-spacing: 2px!important;
+        font-size: 16px;
+        line-height:1.5;
+    }
+    table tr td{
+        text-align: center;
+        padding: 5px;
+    }
+    table tr:nth-child(odd) {
+          background-color: rgba(76, 46, 0, 0.17);
+        }
+        span{
+            @include midtext();
+            font-size: 23px;
+        }
+}
+*/
+
+
+
+/*
+@include css3(transition,all 1s ease);
+@include css3(animation,opacitylight 2s infinite linear);
+@include keyframes(opacitylight) {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+*/
+
+/*
+@media screen and (min-width: 0px) and (max-width:640px) {}
+@media screen and (min-width: 641px) and (max-width:1200px) {}
+@media screen and (min-width: 1201px) and (max-width:2000px) {}
+*/
+
+
+
+
+
+
+@mixin size($w,$h:$w){
+    width: $w ;
+    height: $h ;
+}
+/*zindex*/
+
+@mixin zindex() {
+    z-index: 999;
+}
+
+
+/*midtext*/
+
+@mixin midtext() {
+    font: bold 20px/40px sans-serif;
+    font-family: Microsoft JhengHei;
+    letter-spacing: 1px;
+}
+
+
+/*stext*/
+
+@mixin stext() {
+    font: bolder 14px/15px "Microsoft JhengHei";
+    color: #fff;
+}
+/*btn*/
+
+@mixin btntext() {
+    font: bolder 25px/45px "Microsoft JhengHei";
+}
+@mixin ellipsistext() {
+overflow : hidden;
+text-overflow : ellipsis;
+white-space : nowrap; 
+}
+
+/*specify*/
+
+@mixin css3($property, $value) {
+    @each $prefix in -webkit-,
+    -moz-,
+    -ms-,
+    -o-,
+    '' {
+        #{$prefix}#{$property}: $value;
+    }
+}
+
+
+/*keyframes*/
+
+@mixin keyframes($animationName) {
+    @-webkit-keyframes #{$animationName} {
+        @content;
+    }
+    @-moz-keyframes #{$animationName} {
+        @content;
+    }
+    @-o-keyframes #{$animationName} {
+        @content;
+    }
+    @keyframes #{$animationName} {
+        @content;
+    }
+}
+
+
+/*Responsive*/
+
+@mixin Responsive($point) {
+    @if $point==large {
+        @media (min-width: 2000px) {
+            @content;
+        }
+    }
+    @else if $point==medium {
+        @media (min-width: 1200em) {
+            @content;
+        }
+    }
+    @else if $point==small {
+        @media (min-width: 640em) {
+            @content;
+        }
+    }
+}
+
+@mixin range-width-in( $min: 0, $max: 0){
+    @if $max == 0{
+        @media screen and (min-width: $min){
+            @content;
+        }
+    }@else{
+        @media screen and (min-width: $min) and (max-width: $max){
+            @content;
+        }
+    }
+}
+
+
+/*radius*/
+
+@mixin border-radius($angle) {
+    border-radius: $angle;
+    -webkit-border-radius: $angle;
+    -moz-border-radius: $angle;
+    -ms-border-radius: $angle;
+    -o-border-radius: $angle;
+}
+
+
+/*boxshadow*/
+
+@mixin boxshadow($shx, $shy, $shblur, $shcolor) {
+    box-shadow: $shx $shy $shblur $shcolor;
+    -webkit-box-shadow: $shx $shy $shblur $shcolor;
+    -moz-box-shadow: $shx $shy $shblur $shcolor;
+    -ms-border-radius: $shx $shy $shblur $shcolor;
+    -o-box-shadow: $shx $shy $shblur $shcolor;
+}
+
+
+/*POS*/
+
+@mixin POS($top, $left) {
+    position: absolute;
+    top: $top;
+    left: $left;
+}
+
+
+/*SIZE*/
+
+@mixin SIZE($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+
+/*clearfix*/
+
+@mixin clearfix() {
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+
+/*changebg*/
+
+@mixin bg($name, $bg) {
+    background: url("../images/#{$name}.#{$bg}");
+    width: image-width("../images/#{$name}.#{$bg}");
+    height: image-height("../images/#{$name}.#{$bg}");
+}
+
+
+/*animated-picandtxt*/
+
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+li {
+    list-style: none;
+}
+
+body {
+    width: 100%;
+    background: url(../images/txtbg.png);
+    min-width: 1000px;
+    font: normal 14px/20px "Microsoft JhengHei";
+}
+
+.wrapper {
+    width:100%;
+    height:auto;
+    margin:0 auto;
+    overflow:hidden;
+    min-width: 1000px;
+}
+.wrapper-in{
+    width: 1000px;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+.topbanner{
+    position: relative;
+    background: url(../images/bg.jpg)top center;
+    height: 805px;
+    .topbar{
+        height: 50px;
+        width: 100%;
+        position: relative;
+        background: rgba(255,255,255,.5);
+         @include css3(transition,all .8s ease);
+        &:hover{
+           background: rgba(255,255,255,.8); 
+        }
+        .logo{float: left;}
+        ul{
+            float: right;
+            position: relative;
+            li{
+                float: left;
+                color: #000;
+                line-height: 50px;
+                font-size: 15px;
+                padding: 0 13px;
+                @include css3(transition,all .3s ease);
+                cursor: pointer;
+                &:hover{
+                    background: #1d6d92;
+                    color:#fff;
+                }
+            }
+            .loginbtn{
+                background: #bc0010;
+                color:#fff;
+                &:hover{
+                    background: #ff0000;
+                }
+            }
+        }
+    }
+    .bannerup{
+        >*{position: absolute;@include css3(transition,all .3s ease);opacity: 1;}
+        .map{
+            top:317px;
+            left: 680px;
+            @include css3(transform-origin,left bottom);
+            @include css3(transition,all .6s .1s ease);
+        }
+        .peo-1{
+            top:195px;
+            left:275px;
+            z-index: 10;
+            @include css3(transition,all 1s .2s ease);
+
+        }
+        .peo-1.poeout{
+            top:250px;
+            @include css3(transform,rotate(0deg));
+        }
+        .peo-2{
+            top:120px;
+            left:-70px;
+            z-index: 4;
+            @include css3(transform-origin,left bottom);
+            @include css3(transition,all .5s ease);
+            @include css3(transform,rotate(-360deg));
+        }
+        .peo-3{
+            top:320px;
+            left:605px;
+            z-index: 4;
+            @include css3(transform-origin,left bottom);
+            @include css3(transition,all .5s ease);
+        }
+
+        .slogan{
+            top:50px;
+            @include css3(transition,opacity .8s .3s ease)
+        }
+        .slogan.poeout{
+            @include css3(transform,rotate(0deg));
+        }
+        .poeout{
+            opacity: 0;
+            @include css3(transform,rotate(-180deg));
+        }
+
+    }
+    .ground-1{
+            position: absolute;
+            background: url(../images/ground_1.png) repeat-x;
+            width: 100%;
+            height: 120px;
+            bottom: 0;
+            z-index: 5;
+            @include css3(animation,Animation_bg 20s infinite linear);
+        }
+    .ground-2{
+            position: absolute;
+            background: url(../images/ground_2.png) repeat-x;
+            width: 100%;
+            height: 120px;
+            bottom: 65px;
+            @include css3(animation,Animation_bg2 5s infinite linear);
+        }
+    @include keyframes(Animation_bg) {
+        0%  {background-position: 902px;}
+        100%  {background-position: 0px;}
+    }
+    @include keyframes(Animation_bg2) {
+        0%  {background-position: -902px;}
+        100%  {background-position: 0px;}
+    }
+}
+.databox{
+    table{
+        margin: 0!important;
+    }
+    strong{
+        color:#fff9a8;
+    }
+    .boxtietle{
+        font: bolder 25px/50px  sans-serif!important;
+    }
+}
+.outdatabox{
+    cursor: pointer;
+}
+.successbox,.searchbox,.databox{
+    background: url(../images/txtbg.png);
+    text-align: center;
+    .sbtn{
+        line-height: 30px!important;
+        font-size: 15px!important;
+        padding: 3px 15px!important;
+        margin-bottom: 10px!important;
+    }
+    .boxtietle{
+        font: bolder 25px/50px "Microsoft JhengHei";
+        color: #fff;
+        @include css3(box-shadow,0px 0px 14px rgba(0,0,0,1));
+        text-shadow:2px 2px 10px #000000;
+        cursor: default;
+        margin-bottom: 10px;
+    }
+    select{
+        width: 150px;
+        height: 25px;
+        vertical-align: middle;
+    }
+    input{
+        width: 30px;
+        height: 12px;
+        vertical-align: middle;
+        margin: 0 10px;
+    }
+    .pageenter{
+        border: 2px solid #37daff;
+        margin-left: 10px;
+        @include css3(transition,all .3s ease);
+        line-height: 30px;
+        font-size: 15px;
+        padding: 2px 10px;
+        margin-bottom: 10px;
+        &:hover{
+            background: #37daff;
+            color: #000;
+        }
+    }
+    .active{
+            @include css3(border-radius,50%);
+            border: 3px solid #ff7600;
+            width: 20px;
+            margin: auto;
+        }
+}
+.content.wrapper{
+    overflow: inherit;
+}
+.content ,.successbox ,.searchbox ,.databox{
+    font: normal 15px/20px "Microsoft JhengHei";
+    color: #ecffe7;
+    table{
+            width: 100%;
+            margin: 5px auto;
+            border-collapse: separate;
+            border-spacing: 2px!important;
+            font-size: 14px;
+            line-height:20px;
+            color: #fff;
+            .table-tietle{
+                background: #153c58;
+                color: #ffe998;
+            }
+            .tablecolor1{
+                color:#ffc800;
+            }
+            .tablecolor2{
+                color:#00ffb8;
+            }
+        }
+    table tbody{
+        background: #18695a;
+    }
+    table tr td{
+        text-align: center;
+        padding: 5px;
+    }
+    table tr:nth-child(even) {
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+    h1{
+        font: bolder 40px/60px "Microsoft JhengHei";
+        letter-spacing: 2px;
+        padding-top: 3px;
+        color: #fff;
+        background: linear-gradient(#395500, #1a2700);
+        text-align: center;
+        @include css3(border-radius,100px);
+        @include css3(box-shadow,0px 0px 14px rgba(0,0,0,1));
+        text-shadow:2px 2px 10px #000000;
+        cursor: default;
+        margin-bottom: 10px;
+        span{
+            //font: normal 16px/45px "Microsoft JhengHei";
+            //color:#fff;
+        }
+    }
+    a{
+        color: #37daff;
+    }
+    .tietle{
+        font: bolder 25px/40px "Microsoft JhengHei";
+        color: #fff685;
+        margin-top:15px; 
+        span{
+            font-size: 15px;
+            color: #fff24d;
+        }
+    }
+    section{
+        padding: 10px 0;
+    }
+    .alerttxt{
+        color: #fff9a8;
+    }
+    .rightnav{
+        position: absolute;
+        right: -165px;
+        display: none;
+        @include css3(transition,top 1s ease);
+        .dotline{
+            border-right: 2px solid #fff;
+            width: 60px;
+            li{
+                position: relative;
+                text-align: right;
+                margin-bottom:130px;
+                padding-right: 20px;
+                line-height: 15px;
+                cursor: pointer;
+                @include css3(transition,all .5s ease);
+                &:after{
+                    position: absolute;
+                    content: "";
+                    width: 13px;
+                    height: 13px;
+                    @include css3(border-radius,50%);
+                    border: 1px solid #fff;
+                    background: #fff;
+                    right: -8px;
+                    top: 0;
+                    @include css3(transition,all .5s ease);
+                }
+                &:hover{
+                    color: #fff000;
+                    &:after{
+                        width: 9px;
+                        height: 9px;
+                        border: 3px solid #fff;
+                        background: #1a2700;
+                    }
+                }
+            }
+            .top{
+                    margin-bottom:30px;
+            }
+            a{
+                color:#fff;
+            }
+            .active{
+                color: #fff000;
+                    &:after{
+                        width: 9px;
+                        height: 9px;
+                        border: 3px solid #fff;
+                        background: #1a2700;
+                    }
+            }
+        }
+        .digin{
+            background: url(../images/totop_1.png);
+            width: 130px;
+            height: 100px;
+        }
+        .digin2{
+            background: url(../images/totop_2.png)!important;
+        }
+    }
+    .btnout{
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .btn{
+            background: #ffc800;
+            background: linear-gradient(#ffc800, #ffa500);
+            color: #444444;
+            padding: 10px 20px;
+            line-height: 60px;
+            font-size: 20px;
+            margin: 0 5px;
+            cursor: pointer;
+            @include css3(transition,all .5s ease);
+            @include css3(border-radius,30px);
+            @include css3(box-shadow,0px 0px 14px rgba(0,0,0,1));
+            &:hover{
+                background: #de0000;
+                color: #fff;
+            }
+        }
+    .btn.active{
+        background: #de0000;
+        color: #fff;
+    }
+    .tobtnpage{
+        padding: 15px 10%;
+    }
+    .btnpage1{
+        .btnout{
+            margin-top: 40px;
+        }
+        .time3{
+            position: relative;
+            &:before {
+                content: attr(data-txt);
+                background: #d9444a;
+                color: #fff;
+                padding: 0px 10px;
+                line-height: 25px;
+                font-size: 16px;
+                position: absolute;
+                left: 0;
+                top: -30px;
+                white-space: pre;
+              }
+              &:after {
+                content: "";
+                position: absolute;
+                width: 0;
+                height: 0;
+                border-width: 8px;
+                border-style: solid;
+                border-color: #d9444a transparent transparent #d9444a;
+              }
+        }
+    }
+    .btnpage2 {
+        .btn{
+            line-height: 30px;
+            font-size: 15px;
+            padding: 3px 15px;
+        }
+        .active{
+            @include css3(border-radius,50%);
+            border: 3px solid #ff7600;
+        }
+    }
+    .btnpage{
+        border: 10px solid #2c3e0a;
+        padding: 30px 50px;
+        margin: 20px 0;
+        display: none;
+        @include css3(border-radius,30px);
+        @include css3(box-shadow,0px 0px 14px rgba(0,0,0,1));
+    }
+    .divtable{
+        overflow: hidden;
+        margin-bottom: 20px;
+        .divtr{
+            .divtd{
+                float: left;
+                width: calc(50% - 1px);
+                border-right: 2px solid #0b1000;
+                text-align: center;
+                font: bolder 25px/40px "Microsoft JhengHei";
+                &:last-child{
+                    border-right: 0px solid #0b1000;
+                }
+                select{
+                    width: 150px;
+                    height: 30px;
+                    vertical-align: middle;
+                }
+            }
+        }
+    }
+}
+.alertbox{
+    >*{
+        display: none;
+    }
+}
+.cr{
+    background: #0e1500;
+    padding-top: 10px;
+    margin-top: 30px;
+}
