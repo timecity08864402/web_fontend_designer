@@ -1,4 +1,4 @@
-# Ducken Font-end & Design
+# Ducken Front-end & Design
 履歷作品集網站:
 https://timecity08864402.github.io/web_fontend_designer/
 
